@@ -92,7 +92,7 @@ fieldset {
 }
 
 .search-form__label:has(:focus-visible) {
-  border: 1px solid #ffffff;
+  outline: 1px solid #ffffff;
 }
 
 .search-form__textfield {
@@ -146,10 +146,6 @@ fieldset {
   text-decoration: none;
 }
 
-.search-form__label:has(:focus-visible) {
-  outline: 1px solid #ffffff;
-}
-
 .content__details {
   width: 100%;
   height: 100%;
@@ -197,6 +193,7 @@ fieldset {
 .content__card-link {
   text-decoration: none;
   color: #ffffff;
+  display: block;
 }
 
 .content__video-card {
@@ -233,6 +230,27 @@ fieldset {
 
 .content__video-card-description-container {
   flex-grow: 1;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #ffffff;
 }
 
 .search-form__checkbox-list {
@@ -282,31 +300,6 @@ ol {
 
 .more-button {
   width: 100%;
-}
-
-.content__card-link {
-  display: block;
-}
-
-.content__card-link_current {
-  background-color: #545050;
-}
-
-.content__card-link:active {
-  background-color: #545050;
-}
-
-.content__card-link:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.content__card-link:focus {
-  outline: none;
-}
-
-.content__card-link:focus-visible {
-  outline: 1px solid #ffffff;
 }
 
 /* Кастомный скроллбар */
